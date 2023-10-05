@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import InfoHound from './InfoHound';
 
+
+
+
 const Hound = (props) => {
   const apiUrl = 'https://api.jsonbin.io/v3/b/650d72590574da7622aeb069';
 
@@ -17,10 +20,24 @@ const Hound = (props) => {
     createHounds(hounds);
   };
 
+  handleFetch();
+  
+
   const handleHoundClick = (hound) => {
     props.setSelectedHound(hound);
     props.nextScreen();
   };
+
+  const handleGoBack = () => {
+    props.goBack();
+    // props.setSelectedHound(HOUND);
+    
+  };
+
+  const handleClear = () => {
+    props.setSelectedHound(null);
+  };
+ 
 
   const createHounds = (hounds) => {
     const questionContainer = document.getElementById('hounds');
@@ -40,29 +57,30 @@ const Hound = (props) => {
     const houndImage = document.createElement('img');
     houndImage.src = hound.img;
 
+    const houndHeading3 = document.createElement('h3');
+    houndHeading3.textContent = hound.breed;
+
     houndImage.addEventListener('click', () => handleHoundClick(hound));
 
     houndElement.appendChild(houndImage);
     houndElement.appendChild(houndHeading);
+    // houndElement.appendChild(houndHeading3);
 
     return houndElement;
   };
 
+  handleClear();
+
   return (
-
-    <div>
-
-   
     
     <main id='hounds'>
-
-      
-      
-      <section>
+      <section id='houndsection'>
         <h2>Hounds</h2>
-        <p>Ska vi se vilka hundar som finns?</p>
-        <button id='fetch' onClick={handleFetch}>Fetch</button>
+        <p>Här är alla hundar, tryck på en hund för mer information.</p>
         
+        <button onClick={handleGoBack}>Back</button>
+        
+    
       </section>
       {props.selectedHound && (
         <InfoHound
@@ -74,7 +92,9 @@ const Hound = (props) => {
       
     </main>
 
-    </div>
+    
+
+    
     
   );
 };

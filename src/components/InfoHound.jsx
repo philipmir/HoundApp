@@ -1,27 +1,25 @@
 import React from 'react';
 
 const InfoHound = (props) => {
-  const handleGoBack = () => {
+
+  const handleGoBackz = () => {
     props.goBack();
-    props.setSelectedHound(HOUND);
-    
+  
   };
 
-  const { name, img, breed, age, sex } = props.selectedHound;
+  
 
   return (
-    <div2>
+    <div>
      
-
-     
-      <h2>{name}</h2>
-      <img src={img} alt={name} />
-      <p><strong>Breed:</strong> {breed}</p>
-      <p><strong>Age:</strong> {age}</p>
-      <p><strong>Sex:</strong> {sex}</p>
-      <button onClick={handleGoBack}>Back</button>
+      <h2>{props.selectedHound.name}</h2>
+      <img src={props.selectedHound.img} />
+      <p><strong>Breed:</strong> {props.selectedHound.breed}</p>
+      <p><strong>Age:</strong> {props.selectedHound.age}</p>
+      <p><strong>Sex:</strong> {props.selectedHound.sex}</p>
+      <button onClick={handleGoBackz}>Back</button>
       
-    </div2>
+    </div>
   );
 };
 

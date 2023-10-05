@@ -18,10 +18,10 @@ function App() {
       content = <Welcome nextScreen={() => setCurrentScreen(HOUND)} />;
       break;
     case HOUND:
-      content = <Hound nextScreen={() => setCurrentScreen(INFOHOUND)} selectedHound={selectedHound} setSelectedHound={setSelectedHound} />;
+      content = <Hound nextScreen={() => setCurrentScreen(INFOHOUND)} selectedHound={selectedHound} setSelectedHound={setSelectedHound} goBack={() => setCurrentScreen(WELCOME)}  />;
       break;
     case INFOHOUND:
-      content = <InfoHound nextScreen={() => setCurrentScreen(HOUND)} selectedHound={selectedHound} goBack={() => setCurrentScreen(HOUND)} />;
+      content = <InfoHound nextScreen={() => setCurrentScreen(HOUND)} selectedHound={selectedHound} goBack={() => setCurrentScreen(HOUND)}  />;
       break;
     default:
       content = <Welcome />;

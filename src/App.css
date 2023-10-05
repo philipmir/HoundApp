@@ -1,26 +1,17 @@
-#root {
+
+
+
+
+
+
+/* Container styling */
+.container {
   height: auto;
-  width: 100vh;
+  width: auto;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   border: 5px outset #1C6EA4;
-}
-
-
-
-
-body {
-  height: auto;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #f5f5f5;
-}
-
-/* Container styling */
-.container {
   
   font-family: Arial, sans-serif;
   background-color: #c1fcf9;
@@ -31,20 +22,96 @@ body {
 
 .container div {
   text-align: center;
+  
 }
 
 .container div img {
   margin: 0 auto;
 }
 
+.container div {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  margin: 20px auto; /* Center the div horizontally with margin */
+  max-width: 600px; /* Limit the width for readability */
+  color: #333; /* Text color */
+  font-size: 18px; /* Font size */
+  line-height: 1.4; /* Line height for readability */
+}
+
+.container div h2 {
+  font-size: 24px; /* Larger font size for headings */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.container div p {
+  margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.container div a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underlines from links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.container div a:hover {
+  color: #0056b3; /* Hover color */
+}
+
+
+.hounds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+ 
+  
+}
+
+
+.houndsection {
+  height: auto;
+  width: auto;
+ 
+  
+ 
+  
+}
 
 
 
-/* Header styling */
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
+  text-transform: uppercase; /* Uppercase for impact */
+  letter-spacing: 2px; /* Increased letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadowed style */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+/* Text heading styling */
+h3 {
+  font-size: 1.125rem; /* Slick font size */
+  color: #333; /* Mysterious color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadowed style */
+  letter-spacing: 1px; /* Slightly spaced letters */
+  font-weight: bold; /* Bold and confident */
+  text-transform: uppercase; /* Uppercase for impact */
+  margin-bottom: 10px; /* Slight space below */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+/* Hover effect for h2 and h3 */
+h2:hover,
+h3:hover {
+  color: #ff6600; /* Change color on hover to a cool orange */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 picture {
@@ -56,9 +123,20 @@ picture {
 
 /* Button styling */
 button {
-  background-color: #8abef5;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  margin: 20px auto; /* Center the div horizontally with margin */
+  max-width: 600px; /* Limit the width for readability */
+  color: #333; /* Text color */
+  font-size: 18px; /* Font size */
+  line-height: 1.4; /* Line height for readability */
+  background-color: #ffffff;
+  
   color: black;
-  border: none;
+  border: black;
   padding: 10px 20px;
   margin-right: 10px;
   border-radius: 4px;
@@ -67,7 +145,9 @@ button {
 }
 
 button:hover {
-  background-color: #8abef5;
+  background-color: #affafa;
+  border : black;
+  outline: black;
 }
 
 /* List styling */
@@ -82,6 +162,7 @@ li {
 
 /* Image styling */
 img {
+  
   max-width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -90,14 +171,20 @@ img {
 
 /* Paragraph styling */
 p {
-  margin: 0;
+  margin: 1;
 }
 
-/* Text heading styling */
-h3 {
-  font-size: 18px;
-  color: #333;
-}
 
+
+.menu-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+ 
+  
+}
 
 
